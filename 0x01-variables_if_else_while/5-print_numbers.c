@@ -4,7 +4,7 @@
  * description - uses while statement
  * Return: Always 0 (Success)
  */
-int main((void)
+int main(void)
 {
 char c;
 c = '0';
