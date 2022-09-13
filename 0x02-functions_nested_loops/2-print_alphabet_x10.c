@@ -3,7 +3,7 @@
 /**
  * print_alphabet_x10 - prints in lowercase
  */
-void print_alphabet_x10(void)
+void print_alphabet_*10(void)
 {
 	int j;
 	int k;
