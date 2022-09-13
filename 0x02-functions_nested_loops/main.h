@@ -1,7 +1,1 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-all prototypes listed in the project
-
-
-#endif
+int _putchar(char c);

@@ -1,18 +1,19 @@
-#include "putchar.h"
-/**
- * main - prints _putchar followed by a new line.
- * Return: 0 on success.
- */
-int main(void)
-int _putchar(char _putchar)
-{
-	char c[] = "_putchar";
-	int i;
+#include "main.h"
 
-	for (i = 0; i < 9; i++)
-	{
-		_putchar(c[i]);
-	}
+/** main - prints putchar
+ *  Return: always 0
+*/
+int main(void)
+{
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	_putchar('\n');
+
 	return (0);
 }
