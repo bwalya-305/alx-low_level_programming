@@ -1,9 +1,10 @@
-#include "putchar.p"
+#include "putchar.h"
 /**
  * main - prints _putchar followed by a new line.
  * Return: 0 on success.
  */
 int main(void)
+int _putchar(char _putchar)
 {
 	char c[] = "_putchar";
 	int i;
