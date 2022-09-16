@@ -2,32 +2,33 @@
 #include "main.h"
 
 /**
- * print_diagonal - prints a diagonal
- * @n: parameter
- * Return: returns nothing
+ * main - prints the numbers from 1 to 100
+ * 3 multiples print Fizz instead of the number
+ * 5 multiples print Buzz instead of the number
+ * 3 & 5 multiples print FizzBuzz instead of the number
+ * Return: Always 0 (Success)
  */
 
-void print_diagonal(int n)
+int main(void)
 {
-	int len, space;
+	int i;
+	char f[] = "Fizz";
+	char b[] = "Buzz";
+	char fb[] = "FizzBuzz";
 
-	if (n > 0)
+	for (i = 1; i <= 100; i++)
 	{
-		for (len = 0; len < n; len++)
-		{
-			for (space = 0; space < len; space++)
-			{
-				putchar(' ');
-			}
-
-			putchar('\\');
-
-			if (len == (n - 1))
-			{
-				continue;
-			}
-			putchar('\n');
-		}
+		if (i == 100)
+			printf("%s", b);
+		else if ((i % 3 == 0) && (i % 5 == 0))
+			printf("%s ", fb);
+		else if (i % 3 == 0)
+			printf("%s ", f);
+		else if (i % 5 == 0)
+			printf("%s ", b);
+		else
+			printf("%d ", i);
 	}
-	putchar('\n');
+	printf("\n");
+	return (0);
 }
