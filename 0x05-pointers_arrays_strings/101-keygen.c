@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -8,27 +8,20 @@
   * Return: always 0
   */
 
-int main(void)
+int main()
 {
-	    int sum, i, r;
+    int counter = 0;
+    srandom(time(NULL));  // Correct seeding function for random()
+    char randChar;
 
-		char decode[27] = "abcdefghijklmnopqrstuvwxyz";
-		char key[30];
+    int  passwordLength;
 
-		sum = 0;
-		i = 0;
+    printf("Type in a password Length \n");
+    scanf("%d", &passwordLength);
 
-		srand(time(NULL));
-
-		while (sum < 2772)
-		{
-			r = rand() % 10;
-			key[i] = decode[r];
-			sum += key[i];
-			i++;
-		}
-		r = 2772 - sum;
-		key[i] = r;
-		printf("%s\n",  key);
-		return (0);
-}
+    while(counter < passwordLength)
+    {
+        randChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[random () % 62];
+        printf("%c", randChar);
+        counter++;
+    }
