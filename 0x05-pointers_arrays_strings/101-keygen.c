@@ -3,25 +3,24 @@
 #include <time.h>
 
 /**
-  * main - entry point
-  * Description: creates a random key for program 101_crackme
-  * Return: always 0
-  */
+*main - generates random valid passwords
+*Return: 0 (on success).
+*
+*/
 
-int main()
+int main(void)
 {
-    int counter = 0;
-    srandom(time(NULL));  // Correct seeding function for random()
-    char randChar;
+	int pass, sum;
 
-    int  passwordLength;
+	srand(time(NULL))
+	sum = 0;
+	while (sum <= 2645)
+	{
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%c", pass);
+	}
+	printf("%c", 2772 - sum);
 
-    printf("Type in a password Length \n");
-    scanf("%d", &passwordLength);
-
-    while(counter < passwordLength)
-    {
-        randChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[random () % 62];
-        printf("%c", randChar);
-        counter++;
-    }
+	return (0);
+}
