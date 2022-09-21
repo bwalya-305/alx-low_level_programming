@@ -1,34 +1,30 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * main - prints the numbers from 1 to 100
- * 3 multiples print Fizz instead of the number
- * 5 multiples print Buzz instead of the number
- * 3 & 5 multiples print FizzBuzz instead of the number
- * Return: Always 0 (Success)
- */
+* print_diagonal - draws a diagonal line on the terminal
+* @n: number of times the character \ should be printed
+*/
 
-int main(void)
+void print_diagonal(int n)
 {
-	int i;
-	char f[] = "Fizz";
-	char b[] = "Buzz";
-	char fb[] = "FizzBuzz";
+if (n <= 0)
+{
+_putchar('\n');
+}
+else
+{
+int i, j;
 
-	for (i = 1; i <= 100; i++)
-	{
-		if (i == 100)
-			printf("%s", b);
-		else if ((i % 3 == 0) && (i % 5 == 0))
-			printf("%s ", fb);
-		else if (i % 3 == 0)
-			printf("%s ", f);
-		else if (i % 5 == 0)
-			printf("%s ", b);
-		else
-			printf("%d ", i);
-	}
-	printf("\n");
-	return (0);
+for (i = 0; i < n; i++)
+{
+for (j = 0; j < n; j++)
+{
+if (j == i)
+_putchar('\\');
+else if (j < i)
+_putchar(' ');
+}
+_putchar('\n');
+}
+}
 }
