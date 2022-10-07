@@ -45,7 +45,8 @@ char *create_xarray(int size)
 
 	for (index = 0; index < (size - 1); index++)
 		array[index] = 'x';
-		array[index] = '\0';
+
+	array[index] = '\0';
 
 	return (array);
 }
@@ -92,7 +93,7 @@ int get_digit(char c)
  * @mult: The string of numbers.
  * @digit: The single digit.
  * @zeroes: The necessary number of leading zeroes.
-  *
+ *
  * Description: If mult contains a non-digit, the function
  *              exits with a status value of 98.
  */
@@ -188,7 +189,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  */
 int main(int argc, char *argv[])
 {
-		char *final_prod, *next_prod;
+	char *final_prod, *next_prod;
 	int size, index, digit, zeroes = 0;
 
 	if (argc != 3)
